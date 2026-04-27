@@ -30818,7 +30818,7 @@ export namespace google {
                 SESSION_TYPE_TABLE = 1,
                 SESSION_TYPE_AUTHORIZED_VIEW = 2,
                 SESSION_TYPE_MATERIALIZED_VIEW = 3,
-                SESSION_TYPE_TEST = -1
+                SESSION_TYPE_TEST = 9999
             }
 
             /** Properties of a GetClientConfigurationRequest. */

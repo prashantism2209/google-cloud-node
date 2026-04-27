@@ -73404,7 +73404,7 @@
                  * @property {number} SESSION_TYPE_TABLE=1 SESSION_TYPE_TABLE value
                  * @property {number} SESSION_TYPE_AUTHORIZED_VIEW=2 SESSION_TYPE_AUTHORIZED_VIEW value
                  * @property {number} SESSION_TYPE_MATERIALIZED_VIEW=3 SESSION_TYPE_MATERIALIZED_VIEW value
-                 * @property {number} SESSION_TYPE_TEST=-1 SESSION_TYPE_TEST value
+                 * @property {number} SESSION_TYPE_TEST=9999 SESSION_TYPE_TEST value
                  */
                 v2.SessionType = (function() {
                     var valuesById = {}, values = Object.create(valuesById);
@@ -73412,7 +73412,7 @@
                     values[valuesById[1] = "SESSION_TYPE_TABLE"] = 1;
                     values[valuesById[2] = "SESSION_TYPE_AUTHORIZED_VIEW"] = 2;
                     values[valuesById[3] = "SESSION_TYPE_MATERIALIZED_VIEW"] = 3;
-                    values[valuesById[-1] = "SESSION_TYPE_TEST"] = -1;
+                    values[valuesById[9999] = "SESSION_TYPE_TEST"] = 9999;
                     return values;
                 })();
     
@@ -99746,7 +99746,7 @@
                         case 1:
                         case 2:
                         case 3:
-                        case -1:
+                        case 9999:
                             break;
                         }
                     if (message[".google.bigtable.v2.vrpcSessionType"] != null && message.hasOwnProperty(".google.bigtable.v2.vrpcSessionType")) {
@@ -99760,7 +99760,7 @@
                             case 1:
                             case 2:
                             case 3:
-                            case -1:
+                            case 9999:
                                 break;
                             }
                     }
@@ -99833,8 +99833,8 @@
                         message[".google.bigtable.v2.openSessionType"] = 3;
                         break;
                     case "SESSION_TYPE_TEST":
-                    case -1:
-                        message[".google.bigtable.v2.openSessionType"] = -1;
+                    case 9999:
+                        message[".google.bigtable.v2.openSessionType"] = 9999;
                         break;
                     }
                     if (object[".google.bigtable.v2.vrpcSessionType"]) {
@@ -99865,8 +99865,8 @@
                                 message[".google.bigtable.v2.vrpcSessionType"][i] = 3;
                                 break;
                             case "SESSION_TYPE_TEST":
-                            case -1:
-                                message[".google.bigtable.v2.vrpcSessionType"][i] = -1;
+                            case 9999:
+                                message[".google.bigtable.v2.vrpcSessionType"][i] = 9999;
                                 break;
                             }
                     }
@@ -103211,7 +103211,7 @@
                         case 1:
                         case 2:
                         case 3:
-                        case -1:
+                        case 9999:
                             break;
                         }
                     if (message[".google.api.http"] != null && message.hasOwnProperty(".google.api.http")) {
@@ -103312,8 +103312,8 @@
                         message[".google.bigtable.v2.rpcSessionType"] = 3;
                         break;
                     case "SESSION_TYPE_TEST":
-                    case -1:
-                        message[".google.bigtable.v2.rpcSessionType"] = -1;
+                    case 9999:
+                        message[".google.bigtable.v2.rpcSessionType"] = 9999;
                         break;
                     }
                     if (object[".google.api.http"] != null) {
