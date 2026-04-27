@@ -13550,6 +13550,220 @@
                         }
                       }
                     },
+                    "CachePolicy": {
+                      "oneofs": {
+                        "_cacheKeyPolicy": {
+                          "oneof": [
+                            "cacheKeyPolicy"
+                          ]
+                        },
+                        "_cacheMode": {
+                          "oneof": [
+                            "cacheMode"
+                          ]
+                        },
+                        "_clientTtl": {
+                          "oneof": [
+                            "clientTtl"
+                          ]
+                        },
+                        "_defaultTtl": {
+                          "oneof": [
+                            "defaultTtl"
+                          ]
+                        },
+                        "_maxTtl": {
+                          "oneof": [
+                            "maxTtl"
+                          ]
+                        },
+                        "_negativeCaching": {
+                          "oneof": [
+                            "negativeCaching"
+                          ]
+                        },
+                        "_requestCoalescing": {
+                          "oneof": [
+                            "requestCoalescing"
+                          ]
+                        },
+                        "_serveWhileStale": {
+                          "oneof": [
+                            "serveWhileStale"
+                          ]
+                        }
+                      },
+                      "fields": {
+                        "cacheBypassRequestHeaderNames": {
+                          "rule": "repeated",
+                          "type": "string",
+                          "id": 197581440
+                        },
+                        "cacheKeyPolicy": {
+                          "type": "CachePolicyCacheKeyPolicy",
+                          "id": 159263727,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "cacheMode": {
+                          "type": "string",
+                          "id": 28877888,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "clientTtl": {
+                          "type": "Duration",
+                          "id": 29034360,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "defaultTtl": {
+                          "type": "Duration",
+                          "id": 100253422,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "maxTtl": {
+                          "type": "Duration",
+                          "id": 307578001,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "negativeCaching": {
+                          "type": "bool",
+                          "id": 336110005,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "negativeCachingPolicy": {
+                          "rule": "repeated",
+                          "type": "CachePolicyNegativeCachingPolicy",
+                          "id": 155359996
+                        },
+                        "requestCoalescing": {
+                          "type": "bool",
+                          "id": 532808276,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "serveWhileStale": {
+                          "type": "Duration",
+                          "id": 236682203,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        }
+                      },
+                      "nested": {
+                        "CacheMode": {
+                          "values": {
+                            "UNDEFINED_CACHE_MODE": 0,
+                            "CACHE_ALL_STATIC": 355027945,
+                            "FORCE_CACHE_ALL": 486026928,
+                            "USE_ORIGIN_HEADERS": 55380261
+                          }
+                        }
+                      }
+                    },
+                    "CachePolicyCacheKeyPolicy": {
+                      "oneofs": {
+                        "_includeHost": {
+                          "oneof": [
+                            "includeHost"
+                          ]
+                        },
+                        "_includeProtocol": {
+                          "oneof": [
+                            "includeProtocol"
+                          ]
+                        },
+                        "_includeQueryString": {
+                          "oneof": [
+                            "includeQueryString"
+                          ]
+                        }
+                      },
+                      "fields": {
+                        "excludedQueryParameters": {
+                          "rule": "repeated",
+                          "type": "string",
+                          "id": 124896150
+                        },
+                        "includeHost": {
+                          "type": "bool",
+                          "id": 486867679,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "includeProtocol": {
+                          "type": "bool",
+                          "id": 303507535,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "includeQueryString": {
+                          "type": "bool",
+                          "id": 474036639,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "includedCookieNames": {
+                          "rule": "repeated",
+                          "type": "string",
+                          "id": 66987088
+                        },
+                        "includedHeaderNames": {
+                          "rule": "repeated",
+                          "type": "string",
+                          "id": 533756345
+                        },
+                        "includedQueryParameters": {
+                          "rule": "repeated",
+                          "type": "string",
+                          "id": 2319076
+                        }
+                      }
+                    },
+                    "CachePolicyNegativeCachingPolicy": {
+                      "oneofs": {
+                        "_code": {
+                          "oneof": [
+                            "code"
+                          ]
+                        },
+                        "_ttl": {
+                          "oneof": [
+                            "ttl"
+                          ]
+                        }
+                      },
+                      "fields": {
+                        "code": {
+                          "type": "int32",
+                          "id": 3059181,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
+                        "ttl": {
+                          "type": "Duration",
+                          "id": 115180,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        }
+                      }
+                    },
                     "CalendarModeAdviceRequest": {
                       "fields": {
                         "futureResourcesSpecs": {
@@ -33981,6 +34195,11 @@
                     },
                     "HttpRouteAction": {
                       "oneofs": {
+                        "_cachePolicy": {
+                          "oneof": [
+                            "cachePolicy"
+                          ]
+                        },
                         "_corsPolicy": {
                           "oneof": [
                             "corsPolicy"
@@ -34018,6 +34237,13 @@
                         }
                       },
                       "fields": {
+                        "cachePolicy": {
+                          "type": "CachePolicy",
+                          "id": 457366671,
+                          "options": {
+                            "proto3_optional": true
+                          }
+                        },
                         "corsPolicy": {
                           "type": "CorsPolicy",
                           "id": 398943748,
